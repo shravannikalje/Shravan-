@@ -1,1 +1,269 @@
-html 
+<!DOCTYPE html>
+<html lang="mr">
+
+<!DOCTYPE html>
+<html lang="mr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <nav>
+    <div class="container">
+
+    
+      
+      <div id="details" style="display: none;">
+        <p>🔹 भाडे: ₹18,000/महिना</p>
+        <p>🔹 स्थिती: 1RK अपार्टमेंट</p>
+        <p>🔹 ठिकाण: पुणे, महाराष्ट्र</p>
+        <p>🔹 सुविधा: वीज, पाणी, इंटरनेट समाविष्ट</p>
+        <p>🔹 संपर्क: <span id="phoneNumber">9876543210</span></p>
+        <button onclick="callNow()">📞 Call Now</button>
+        <button onclick="toggleDetails()">तपशील बंद करा</button>
+      </div>
+<button onclick="scheduleVisit()">📅 भेटीची वेळ ठरवा</button>
+
+<div id="visitOptions" style="display: none;">
+  <p>कृपया वेळ निवडा:</p>
+  <button onclick="setTime('सकाळ')">🌞 सकाळ</button>
+  <button onclick="setTime('दुपार')">🌤 दुपार</button>
+  <button onclick="setTime('संध्याकाळ')">🌙 संध्याकाळ</button>
+</div>
+
+<div id="selectedTime" style="display: none;">
+  <p>तुम्ही <strong id="timeSlot"></strong> निवडले आहे.</p>
+  <label>टाइम सेट करा:</label>
+  <input type="time" id="visitTime">
+  <button onclick="confirmVisit()">✅ वेळ निश्चित करा</button>
+</div>
+
+    
+      
+    
+
+
+    </div>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>होम रेंटल</title>
+  <link rel="stylesheet" href="styles.css">
+
+
+<body>
+  <div class="container">
+    <header>
+      <h1>पुण्यात घर शोधा!</h1>
+      <p>1BHK, 2BHK, 1RK घरांची यादी पहा.</p>
+
+
+      
+<div id="profileSection" style="display: none;">
+  <h2>Welcome to Your Profile!</h2>
+  <p>Your account details will be shown here.</p>
+</div>
+
+    <div class="search-bar">
+      <input type="text" id="location" placeholder="शहराचे नाव टाका...">
+      <button onclick="searchProperties()">🔍 शोधा</button>
+      <button onclick="callNow('9876543210')">📞 Call Now</button>
+      <button onclick="toggleDetails()">📜 तपशील पहा</button>
+    </div>
+
+
+      <button id="menuButton">☰</button>
+      <div id="menu" class="hidden">
+        <ul>
+          <li><a href="#" onclick="toggleLoginInfo()">प्रोफाइल</a></li>
+          <li><a href="#" onclick="logout()">लॉगआउट</a></li>
+        </ul>
+      </div>
+    <div id="loginInfo" class="hidden">
+      <p>Welcome, User!</p>
+      <button id="logoutButton">Logout</button>
+<div class="search-bar">
+  <input type="text" id="location" placeholder="शहराचे नाव टाका...">
+  <button onclick="searchProperties()">🔍 शोधा</button>
+  <button onclick="showOwners()">📋 रूम मालक पहा</button>
+</div>
+
+<div id="ownerDetails" style="display: none;"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="search-results">
+        <ul id="property-list"></ul>
+    
+    <div id="results"></div>
+    
+  </header>
+
+  <section id="room-list">
+    <h2>उपलब्ध रूम्स:</h2>
+    <div class="room">
+      <h3>1BHK अपार्टमेंट</h3>
+
+      <p>₹12,000/month • वीज बिल समाविष्ट</p>
+      <button onclick="bookRoom('1BHK')">बुक करा</button>
+      <button onclick="viewDetails('1BHK')">तपशील पहा</button>
+      <button onclick="contactOwner('1BHK')">मालकाशी संपर्क साधा</button>
+      <button onclick="scheduleVisit('1BHK')">भेटीची वेळ ठरवा</button>
+      <div>
+    </div>
+    <div class="room">
+      <h3>2BHK अपार्टमेंट</h3>
+      <p>₹15,000/month • वीज बिल समाविष्ट</p>
+      <button onclick="bookRoom('2BHK')">बुक करा</button>
+      <button onclick="viewDetails('2BHK')">तपशील पहा</button>
+      <button onclick="contactOwner('2BHK')">मालकाशी संपर्क साधा</button>
+      <button onclick="scheduleVisit('2BHK')">भेटीची वेळ ठरवा</button>
+
+      <div>
+
+      </div>
+      </div>
+      <div class="room">
+        <h3>3BHK अपार्टमेंट</h3>
+        <p>₹20,000/month • वीज बिल समाविष्ट</p>
+        <button onclick="bookRoom('3BHK')">बुक करा</button>
+        <button onclick="viewDetails('3BHK')">तपशील पहा</button>
+        <button onclick="contactOwner('3BHK')">मालकाशी संपर्क साधा</button>
+        <button onclick="scheduleVisit('3BHK')">भेटीची वेळ ठरवा</button>
+  </section>
+  </div>
+  <div class="room">
+    <h3>4BHK अपार्टमेंट</h3>
+    <p>₹25,000/month • वीज बिल समाविष्ट</p>
+    <button onclick="bookRoom('4BHK')">बुक करा</button>
+    <button onclick="viewDetails('4BHK')">तपशील पहा</button>
+    <button onclick="contactOwner('4BHK')">मालकाशी संपर्क साधा</button>
+    <button onclick="scheduleVisit('4BHK')">भेटीची वेळ ठरवा</button>
+
+  </div>
+  <link rel="stylesheet" href="styles.css">
+  <div class="room">
+    <h3>5BHK अपार्टमेंट</h3>
+    <p>₹30,000/month • वीज बिल समाविष्ट</p>
+    <button onclick="bookRoom('5BHK')">बुक करा</button>
+    <button onclick="viewDetails('5BHK')">तपशील पहा</button>
+    <button onclick="contactOwner('5BHK')">मालकाशी संपर्क साधा</button>
+    <button onclick="scheduleVisit('5BHK')">भेटीची वेळ ठरवा</button>
+  </div> 
+    <script src="script.js"></script>
+</body>
+</html>
+  </section>
+<button id="viewDetailsButton">तपशील पहा</button>
+<div id="details" style="display: none;">
+  <p>🔹 *भाडे:* ₹18,000/महिना</p>
+  <p>🔹 *स्थिती:* 1RK अपार्टमेंट</p>
+  <p>🔹 *ठिकाण:* पुणे, महाराष्ट्र</p>
+</div>
+</html>
+   
+   <div id="details" style="display: none;">
+  <p>🔹 *भाडे:* ₹18,000/महिना</p>
+  <p>🔹 *स्थिती:* 1RK अपार्टमेंट</p>
+  <p>🔹 *ठिकाण:* पुणे, महाराष्ट्र</p>
+  <p>🔹 *सुविधा:* वीज, पाणी, इंटरनेट समाविष्ट</p>
+  <p>🔹 *संपर्क:* 9876543210</p>
+  <p>🔹 *भेटीची वेळ:* सोमवार ते शुक्रवार, 10 AM - 5 PM</p>
+  <p>🔹 *अधिक माहिती:* घरात फर्निचर, वॉशिंग मशीन, आणि गॅस स्टोव्ह समाविष्ट आहे.</p>
+  <p>🔹 *संपर्क:* 9876543210</p>
+
+  <button onclick="toggleDetails()">तपशील बंद करा</button>
+</div>
+  <script>
+    function toggleDetails() {
+      const details = document.getElementById('details');
+      if (details.style.display === 'none') {
+        details.style.display = 'block';
+      } else {
+        details.style.display = 'none';
+      }
+    }
+  </script>
+  <script>
+    function toggleDetails() {
+      const details = document.getElementById('details');
+      if (details.style.display === 'none') {
+        details.style.display = 'block';
+      } else {
+        details.style.display = 'none';
+      }
+    }
+    function bookRoom(roomType) {
+      alert(roomType + " बुक केले आहे.");
+    }
+    function viewDetails(roomType) {
+      alert(roomType + " च्या तपशीलांची माहिती.");
+    }
+
+    function contactOwner(roomType) {
+      alert(roomType + " च्या मालकाशी संपर्क साधा.");
+    }
+    function scheduleVisit(roomType) {
+      alert(roomType + " च्या भेटीची वेळ ठरवा.");
+    }
+    function searchProperties() {
+      const location = document.getElementById('location').value;
+      alert(location + " मध्ये घर शोधा.");
+    }
+    function toggleLoginInfo() {
+      const loginInfo = document.getElementById('loginInfo');
+      if (loginInfo.classList.contains('hidden')) {
+        loginInfo.classList.remove('hidden');
+      } else {
+        loginInfo.classList.add('hidden');
+      }
+    }
+    function logout() {
+      alert("Logout successful!");
+      document.getElementById('loginInfo').classList.add('hidden');
+    }
+    document.getElementById('menuButton').addEventListener('click', toggleLoginInfo);
+    document.getElementById('logoutButton').addEventListener('click', logout);  
+    document.getElementById('viewDetailsButton').addEventListener('click', toggleDetails);
+  </script> 
+
+  <script>
+    function toggleDetails() {
+      const details = document.getElementById('details');
+      if (details.style.display === 'none') {
+        details.style.display = 'block';
+      } else {
+        details.style.display = 'none';
+      }
+    }
