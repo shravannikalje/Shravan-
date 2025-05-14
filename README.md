@@ -21,4 +21,8 @@
 ## ✨ License  
 हे प्रोजेक्ट ओपन-सोर्स आहे!  
 
+## 👨‍💻 Developer  
+**Shravan Nikalaje**  
+Passionate Web Developer | HTML, CSS, JavaScript Enthusiast 🚀  
+
 ---
